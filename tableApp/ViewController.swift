@@ -26,19 +26,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+
+}
+
+
+class addTask: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var btn: UIButton!
+    
+    @IBAction func pushToArray(_ sender: UIButton) {
+        tasks.append(textField.text!)
+    }
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        btn.layer.cornerRadius = 10.0
     }
-
-
 }
-
