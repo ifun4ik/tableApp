@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var i = 0
+        if (i > 3){
+            print("Add more!")
+            i+=1
+        }
+        
     }
 
 
